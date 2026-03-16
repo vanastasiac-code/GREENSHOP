@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="container_register">
+        <button class="close"></button>
+        <div class="link_register">
+            <a class="link" href="login.html">Login</a>
+            <a class="active" href="register.html">Register</a>
+        </div>
+        <form class="form_register" action="/submit" method="POST" id="form_register">
+            <p>
+                Enter your email and password to register.
+            </p>
+            <div class="input_form">
+                <input class="input_register" type="text" placeholder="Username">
+                <input class="input_register" type="email" placeholder="Enter your email address" >
+                <input class="input_register" type="password" placeholder="Password">
+                <input class="input_register" type="password" placeholder="Confirm Password">
+            </div>
+            <button form="form_register" class="btn_register"> Register</button>
+        </form>
+        <div class="line-text">
+            <span>Or register with</span>
+        </div>
+        <div class="login-with">
+            <button class="btn_login-with">
+                <img class="img_login-with" src="images/google1.svg" alt="google logo">
+                <span class="login-with_description">Continue with Google</span>
+            </button>
+            <button class="btn_login-with">
+                <img class="img_login-with" src="images/facebook1.svg" alt="facebook logo">
+                <span class="login-with_description">Continue with Facebook</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
