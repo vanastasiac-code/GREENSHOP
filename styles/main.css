@@ -130,6 +130,9 @@ input{
     display: flex;
     justify-content: center;
 }
+.btn_login-with:hover{
+    border: 2px solid #A5A5A5;
+}
 .img_login-with{
     width: 20px;
     height: 20px;
@@ -151,11 +154,9 @@ input{
     line-height: 16px;
 }
 .header{
-    display: inline-block;
-    vertical-align: middle;
     font-size: 0;
     padding: 0 0 9px;
-    margin: 30px 0 12px 0;
+    margin: 30px 0 12px;
     width: 100%;
     border-bottom: 0.3px solid #46A35880;
 }
@@ -167,23 +168,13 @@ input{
 .logo_img{
     display: inline-block;
     vertical-align: middle;
-    width: 34px;
+    width: 150px;
     height: auto;
-}
-.logo > h2{
-    display: inline-block;
-    vertical-align: middle;
-    padding-left: 5px;
-    color: #46A358;
-    width: 110px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 14px;
 }
 .nav{
     display: inline-block;
     width: calc(100% - 250px);
-    padding: 8px 300px 12px 220px;
+    text-align: center;
 }
 .menu{
     padding: 0;
@@ -197,6 +188,9 @@ input{
     color: #3D3D3D;
     text-decoration: none;
     padding: 8px 20px 25px;
+}
+.navigation_item:hover{
+    color: #727272;
 }
 .navigation_item:active{
     font-weight: bold;
@@ -218,18 +212,15 @@ input{
      font-size: 16px;
      line-height: 20px;
 }
+.btn:hover{
+    background-color: darkgreen;
+}
 .intro{
-    display: inline-block;
-    vertical-align: middle;
-    padding: 0;
-    margin: 0 ;
-    width: 100%;
     background-color: #F5F5F580;
 }
 .intro_content{
     display: inline-block;
     width: 557px;
-    text-align: left;
     vertical-align: middle;
     padding: 0;
 }
@@ -259,7 +250,7 @@ h1 > span{
     line-height: 24px;
     font-weight: 400;
     margin: 7px 20px 12px 0;
-    padding: 0 12px 0 0;
+    padding-right:12px;
 }
 .intro_img{
     display: inline-block;
@@ -270,9 +261,11 @@ h1 > span{
     margin: 0 12px 0 88px;
 }
 .btn_intro{
-    color: #FFFFFF;
     font-size: 16px;
+    font-weight: 700;
     line-height: 20px;
     padding: 7px 27px 9px 26px;
     margin-top: 44px;
+    display: block;
+    width: 150px;
 }
