@@ -29,7 +29,7 @@
     font-style: normal;
 }
 body{
-    font: 400 14px/1.2 'Cera Pro', sans-serif;
+    font: 14px/1.2 'Cera Pro', sans-serif;
     background-color: #FFFFFF;
 }
 .container{
@@ -307,6 +307,7 @@ h1 > span{
     font-size: 18px;
     line-height: 0.8;
     font-weight: 700;
+    padding-left: 18px;
 }
 .sidebar_list{
     list-style: none;
@@ -320,6 +321,7 @@ h1 > span{
 .sidebar_list .active{
     color: #46A358;
     font-weight: 700;
+    pointer-events: none;
 }
 .sidebar_list a:hover{
     color: #727272;
@@ -329,25 +331,34 @@ h1 > span{
 }
 .filters{
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
 }
 .filter_list{
     list-style: none;
     padding: 0;
     max-width: 400px;
+    margin: 0;
+    overflow: hidden;
+    display: inline-block;
 }
 .filter_list .active{
     color: #46A358;
     font-weight: 700;
     border-bottom: 2px solid #46A358;
+    pointer-events: none;
+    display: block;
 }
 .filter_list li{
     float: left;
+    vertical-align: middle;
 }
 .filter_list a{
     color: #3D3D3D;
     font-size: 15px;
-    line-height: 1.1;
+    line-height: 16px;
     text-decoration: none;
     margin-right: 40px;
 }
@@ -358,7 +369,8 @@ h1 > span{
     float: right;
     color: #3D3D3D;
     font-size: 15px;
-    line-height: 1.1;
+    line-height: 16px;
+    display: inline-block;
 }
 .filters select{
     color: #3D3D3D;
@@ -375,8 +387,13 @@ h1 > span{
 }
 .shop_card img{
     width: 250px;
+    height: 250px;
+    vertical-align: middle;
+    margin: 10px 0;
+}
+.shop_card_img{
+    width: 250px;
     height: 300px;
-    padding-bottom: 50px;
     background-color: #FBFBFB;
 }
 .shop_card p{
@@ -402,6 +419,7 @@ h1 > span{
     vertical-align: middle;
 }
 .pages a{
+    display: block;
     color: #3D3D3D;
     font-weight: 300;
     font-size: 18px;
@@ -409,7 +427,9 @@ h1 > span{
     text-decoration: none;
     border: 1px solid #E5E5E5;
     border-radius: 4px;
-    padding: 9px 13px 10px 12px;
+    padding: 12px;
+    width: 36px;
+    height: 43px;
 }
 .pages button{
     float: right;
@@ -417,7 +437,7 @@ h1 > span{
     border-radius: 4px;
     padding: 9px 13px 10px 12px;
     background-color: #FFFFFF;
-    width: 35.92px;
+    width: 36px;
     height: 43px;
     cursor: pointer ;
 }
@@ -425,10 +445,13 @@ h1 > span{
     background-color: #46A358;
     color: #FFFFFF;
     font-weight: 700;
+    pointer-events: none;
 }
 .pages a:hover{
     background-color: #727272;
+    color: #FFFFFF;
 }
 .pages button:hover{
-    background-color: #A5A5A5;
+    background-color: #727272;
+    color: #FFFFFF;
 }
