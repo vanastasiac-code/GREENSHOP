@@ -408,6 +408,9 @@ h1 > span{
     line-height: 0.8;
     font-weight: 700;
 }
+.shop_now{
+    overflow: hidden;
+}
 .pages{
     float: right;
 }
@@ -427,9 +430,10 @@ h1 > span{
     text-decoration: none;
     border: 1px solid #E5E5E5;
     border-radius: 4px;
-    padding: 12px;
-    width: 36px;
-    height: 43px;
+    padding: 10px;
+    text-align: center;
+    width: 35px;
+    height: 35px;
 }
 .pages button{
     float: right;
@@ -437,8 +441,8 @@ h1 > span{
     border-radius: 4px;
     padding: 9px 13px 10px 12px;
     background-color: #FFFFFF;
-    width: 36px;
-    height: 43px;
+    width: 35px;
+    height: 35px;
     cursor: pointer ;
 }
 .pages .active{
