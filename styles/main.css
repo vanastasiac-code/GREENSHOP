@@ -1,5 +1,35 @@
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
 body{
-    font-family: Cera Pro, sans-serif;
+    font: 14px/1.2 'Cera Pro', sans-serif;
     background-color: #FFFFFF;
 }
 .container{
@@ -51,10 +81,11 @@ body{
     padding-top: 40px;
     padding-bottom: 36px;
 }
-.active{
+.link.active{
     color: #46A358;
     pointer-events: none;
     text-decoration: none;
+    border: none;
 }
 .link{
     color: #3D3D3D;
@@ -62,13 +93,13 @@ body{
     border-right: 1px solid #3D3D3D;
     height: 16px;
     padding-right: 15px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 16px;
 }
 .link_register{
     display: flex;
     gap:22px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 16px;
     padding-top: 60px;
 }
 .form_register > p{
@@ -78,8 +109,6 @@ body{
     width: 255px;
 }
 input{
-    font-size: 14px;
-    font-weight: 400;
     color: #A5A5A5;
     width: 300px;
     height: 40px;
@@ -104,7 +133,6 @@ input{
 .line-text > span{
     color: #3D3D3D;
     font-size: 13px;
-    font-weight: 400;
     line-height: 16px;
 }
 .line-text{
@@ -150,7 +178,6 @@ input{
     padding: 5px 0 5px 0;
     color: #727272;
     font-size: 13px;
-    font-weight: 400;
     line-height: 16px;
 }
 .header{
@@ -181,13 +208,14 @@ input{
 }
 .menu > li{
     display: inline-block;
+    margin: 0 20px;
 }
 .navigation_item{
     font-size: 16px;
     line-height: 20px;
     color: #3D3D3D;
     text-decoration: none;
-    padding: 8px 20px 25px;
+    padding: 8px 0 22px;
 }
 .navigation_item:hover{
     color: #727272;
@@ -208,15 +236,17 @@ input{
     padding: 1px 1px 1px 1px;
 }
 .btn_nav{
-     padding: 5px 15px 7px;
-     font-size: 16px;
-     line-height: 20px;
+    padding: 5px 15px 7px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
 }
 .btn:hover{
     background-color: darkgreen;
 }
 .intro{
     background-color: #F5F5F580;
+    margin-bottom: 46px;
 }
 .intro_content{
     display: inline-block;
@@ -226,8 +256,7 @@ input{
 }
 .intro_content_welcome{
     color: #3D3D3D;
-    font-size: 14px;
-    line-height: 16px;
+    font-weight: 500;
     text-transform: uppercase;
     margin: 0 0 7px;
 }
@@ -236,7 +265,7 @@ h1{
     font-size: 60px;
     line-height: 70px;
     width: 560px;
-    font-weight: 800;
+    font-weight: 900;
     text-transform: uppercase;
     margin: 0;
 }
@@ -246,9 +275,7 @@ h1 > span{
 }
 .intro_content_text{
     color: #727272;
-    font-size: 14px;
     line-height: 24px;
-    font-weight: 400;
     margin: 7px 20px 12px 0;
     padding-right:12px;
 }
@@ -268,4 +295,167 @@ h1 > span{
     margin-top: 44px;
     display: block;
     width: 150px;
+}
+.sidebar{
+    float: left;
+    width: 310px;
+    background-color: #FBFBFB;
+    margin-right: 50px;
+}
+.sidebar > h2{
+    color: #3D3D3D;
+    font-size: 18px;
+    line-height: 0.8;
+    font-weight: 700;
+    padding-left: 18px;
+}
+.sidebar_list{
+    list-style: none;
+}
+.sidebar_list a{
+    color: #3D3D3D;
+    font-size: 15px;
+    line-height: 2.6;
+    text-decoration: none;
+}
+.sidebar_list .active{
+    color: #46A358;
+    font-weight: 700;
+    pointer-events: none;
+}
+.sidebar_list a:hover{
+    color: #727272;
+}
+.shop{
+    overflow: hidden;
+}
+.filters{
+    overflow: hidden;
+    margin-bottom: 25px;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
+.filter_list{
+    list-style: none;
+    padding: 0;
+    max-width: 400px;
+    margin: 0;
+    overflow: hidden;
+    display: inline-block;
+}
+.filter_list .active{
+    color: #46A358;
+    font-weight: 700;
+    border-bottom: 2px solid #46A358;
+    pointer-events: none;
+    display: block;
+}
+.filter_list li{
+    float: left;
+    vertical-align: middle;
+}
+.filter_list a{
+    color: #3D3D3D;
+    font-size: 15px;
+    line-height: 16px;
+    text-decoration: none;
+    margin-right: 40px;
+}
+.filter_list a:hover{
+    color: #727272;
+}
+.filters div{
+    float: right;
+    color: #3D3D3D;
+    font-size: 15px;
+    line-height: 16px;
+    display: inline-block;
+}
+.filters select{
+    color: #3D3D3D;
+    border: none;
+    font-size: 15px;
+    line-height: 1.1;
+}
+.filters select:hover{
+    color: #727272;
+}
+.shop_card{
+    width: 258px;
+    height: 350px;
+}
+.shop_card img{
+    width: 250px;
+    height: 250px;
+    vertical-align: middle;
+    margin: 10px 0;
+}
+.shop_card_img{
+    width: 250px;
+    height: 300px;
+    background-color: #FBFBFB;
+}
+.shop_card p{
+    color: #3D3D3D;
+    font-size: 16px;
+    line-height: 1;
+    margin: 0 0 6px;
+}
+.shop_card span{
+    color: #46A358;
+    font-size: 18px;
+    line-height: 0.8;
+    font-weight: 700;
+}
+.shop_now{
+    overflow: hidden;
+}
+.pages{
+    float: right;
+}
+.pages ul{
+    padding: 0;
+}
+.pages li{
+    display: inline-block;
+    vertical-align: middle;
+}
+.pages a{
+    display: block;
+    color: #3D3D3D;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 0.8;
+    text-decoration: none;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+}
+.pages button{
+    float: right;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    padding: 9px 13px 10px 12px;
+    background-color: #FFFFFF;
+    width: 35px;
+    height: 35px;
+    cursor: pointer ;
+}
+.pages .active{
+    background-color: #46A358;
+    color: #FFFFFF;
+    font-weight: 700;
+    pointer-events: none;
+}
+.pages a:hover{
+    background-color: #727272;
+    color: #FFFFFF;
+}
+.pages button:hover{
+    background-color: #727272;
+    color: #FFFFFF;
 }
