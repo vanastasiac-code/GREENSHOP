@@ -417,17 +417,14 @@ h1 > span{
     display: flex;
     margin-bottom: 93px;
 }
-.shopping{
-    position: absolute;
-    bottom: 45px;
-    left: 67px;
-    display: none;
-}
 .shopping_list{
-    display: flex;
+    display: none;
     gap: 10px;
     padding: 0;
     margin: 0;
+    position: absolute;
+    bottom: 45px;
+    left: 67px;
 }
 .shopping_list li{
     list-style: none;
@@ -435,16 +432,20 @@ h1 > span{
 .btn_shopping{
     width: 35px;
     height: 35px;
+    padding: 8px;
     background-color: #FFFFFF;
     border-radius: 4px;
     border: none;
     cursor: pointer;
 }
-.shop_card:hover .shopping{
-    display: block;
+.btn_shopping img{
+    margin: 0;
+}
+.shop_card:hover .shopping_list{
+    display: flex;
 }
 .shop_card:hover{
-    border-top: 1px solid #46A358;
+    border-top-color: #46A358;
 }
 .sale{
     background-color: #46A358;
