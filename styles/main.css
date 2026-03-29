@@ -385,6 +385,8 @@ h1 > span{
 }
 .shop_card{
     flex-basis: calc((100% - 66px)/3);
+    position: relative;
+    border-top: 1px solid #FBFBFB;
 }
 .shop_card img{
     max-width: 100%;
@@ -397,6 +399,7 @@ h1 > span{
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 .shop_card p{
     color: #3D3D3D;
@@ -404,7 +407,7 @@ h1 > span{
     line-height: 1;
     margin: 0 0 6px;
 }
-.shop_card span{
+.shop_card_value{
     color: #46A358;
     font-size: 18px;
     line-height: 0.8;
@@ -413,6 +416,46 @@ h1 > span{
 .shop_now{
     display: flex;
     margin-bottom: 93px;
+}
+.shopping{
+    position: absolute;
+    bottom: 45px;
+    left: 67px;
+    display: none;
+}
+.shopping_list{
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+.shopping_list li{
+    list-style: none;
+}
+.btn_shopping{
+    width: 35px;
+    height: 35px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+.shop_card:hover .shopping{
+    display: block;
+}
+.shop_card:hover{
+    border-top: 1px solid #46A358;
+}
+.sale{
+    background-color: #46A358;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    padding: 7px 8px;
 }
 .pages{
     display: flex;
@@ -561,15 +604,10 @@ h1 > span{
     color: #3D3D3D;
     font-weight: 500;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    width: 89px;
 }
 .blog_posts_items a:after{
     content: '→';
-    position: relative;
-    padding-top: 2px;
-    padding-left: 5px;
+    margin-left: 5px;
 }
 .blog_posts_items a:hover{
     color: #46A358;
