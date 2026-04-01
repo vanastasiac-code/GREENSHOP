@@ -251,10 +251,10 @@ input{
     list-style: none;
     background-color: #EDF6EE;
     padding: 7px 14px;
-    position: relative;
     text-shadow: none;
+    /*position: relative;*/
 }
-.submenu > li:has(.second_submenu):after{
+.submenu > li:has(.second_submenu) > a:after{
     content: '';
     width: 6px;
     height: 6px;
@@ -263,7 +263,7 @@ input{
     transform: rotate(45deg) translateY(-50%);
     display: inline-block;
     position: absolute;
-    right: 13px;
+    left: 151px;
     top: 50%;
 }
 .submenu a{
@@ -271,6 +271,7 @@ input{
     font-size: 16px;
     line-height: 20px;
     color: #3D3D3D;
+    position: relative;
 }
 .menu > li:hover .submenu{
      display: block;
@@ -291,8 +292,8 @@ input{
 }
 .second_submenu{
     position: absolute;
-    top: calc(100% - 136px);
     left: 100%;
+    top: 35px;
     width: 178px;
     padding-left: 2px;
     display: none;
