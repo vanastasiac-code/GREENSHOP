@@ -7,10 +7,23 @@
     <title>Login</title>
 </head>
 <body>
-    <button class="close"></button>
-    <div class="link_register">
-        <a class="link active" href="login.html">Login</a>
-        <a class="link" href="register.html">Register</a>
+    <div class="container_register">
+        <button class="close"></button>
+        <div class="link_register">
+            <a class="link_login active" href="login.html">Login</a>
+            <a class="link_login" href="register.html">Register</a>
+        </div>
+        <form class="form_register" action="/submit" method="POST" id="form_login">
+            <p>
+                Enter your email and password to log in.
+            </p>
+            <div class="input_form">
+                <input class="input_register" type="email" placeholder="Enter your email address" >
+                <input class="input_register" type="password" placeholder="Password">
+            </div>
+            <button form="form_login" class="btn_register btn"> Log in</button>
+        </form>
     </div>
+
 </body>
 </html>
