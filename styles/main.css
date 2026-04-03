@@ -90,12 +90,19 @@ body{
 .link{
     color: #3D3D3D;
     text-decoration: none;
-    border-right: 1px solid #3D3D3D;
-    height: 16px;
-    padding-right: 15px;
     font-weight: 500;
     font-size: 20px;
     line-height: 16px;
+    position: relative;
+}
+.link:after{
+    content: '|';
+    position: absolute;
+    right: -14px;
+    bottom: 0;
+}
+.link.active:after{
+    display: none;
 }
 .link_register{
     display: flex;
@@ -179,6 +186,27 @@ input{
     color: #727272;
     font-size: 13px;
     line-height: 16px;
+}
+.link_login.active{
+    color: #46A358;
+    pointer-events: none;
+    text-decoration: none;
+    border: none;
+}
+.link_login{
+    color: #3D3D3D;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 16px;
+    position: relative;
+}
+.link_login.active:after{
+    content: '|';
+    position: absolute;
+    right: -14px;
+    bottom: 0;
+    color: #3D3D3D;
 }
 .header{
     font-size: 0;
