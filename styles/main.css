@@ -731,13 +731,12 @@ h1 > span{
 }
 .footer_block_list li{
     max-width: 204px;
-    padding: 108px 0 0;
+    padding-top: 108px;
     position: relative;
 }
 .footer_item_garden{
     background: url("../images/footer_bg1.svg") no-repeat;
     background-position-x: 16px;
-    position: relative;
 }
 .footer_block_list li:after{
     content: '';
@@ -752,7 +751,6 @@ h1 > span{
 .footer_item_plant{
     background: url("../images/footer_bg2.svg") no-repeat;
     background-position-x: 16px;
-    position: relative;
 }
 .footer_item_watering{
     background: url("../images/footer_bg3.svg") no-repeat;
@@ -771,7 +769,7 @@ h1 > span{
     font-size: 17px;
     line-height: 16px;
 }
-.footer_block_list span{
+.footer_block_list p{
     color: #727272;
     line-height: 22px;
 }
@@ -866,6 +864,7 @@ h1 > span{
     list-style: none;
     padding: 0;
     margin-top: 8px;
+    max-width: 138px;
 }
 .footer_menu_list a{
     text-decoration: none;
@@ -877,6 +876,7 @@ h1 > span{
 }
 .footer_social_media{
     margin-right: 155px;
+    max-width: 224px;
 }
 .footer_social_media h3{
     color: #3D3D3D;
@@ -902,9 +902,14 @@ h1 > span{
     align-items: center;
     gap: 10px;
     margin-bottom: 33px;
+    list-style: none;
+    padding: 0;
 }
 .footer_copyrights{
     text-align: center;
     color: #3D3D3D;
     line-height: 2.1;
+}
+.footer_copyrights p{
+    margin: 0;
 }
