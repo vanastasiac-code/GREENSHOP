@@ -28,6 +28,55 @@
     font-weight: 300;
     font-style: normal;
 }
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icons/icomoon.eot?v2qspo');
+    src:  url('../fonts/icons/icomoon.eot?v2qspo#iefix') format('embedded-opentype'),
+    url('../fonts/icons/icomoon.ttf?v2qspo') format('truetype'),
+    url('../fonts/icons/icomoon.woff?v2qspo') format('woff'),
+    url('../fonts/icons/icomoon.svg?v2qspo#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-youtube:before {
+    content: "\e900";
+}
+.icon-twitter:before {
+    content: "\f099";
+}
+.icon-facebook:before {
+    content: "\f09a";
+}
+.icon-linkedin:before {
+    content: "\f0e1";
+}
+.icon-instagram:before {
+    content: "\f16d";
+}
+.icon-tell:before {
+    content: "\e901";
+}
+.icon-message:before {
+    content: "\e902";
+}
+.icon-location:before {
+    content: "\e903";
+}
 body{
     font: 14px/1.2 'Cera Pro', sans-serif;
     background-color: #FFFFFF;
@@ -167,6 +216,7 @@ input{
 }
 .btn_login-with:hover{
     border: 2px solid #A5A5A5;
+    transition: 0.2s;
 }
 .img_login-with{
     width: 20px;
@@ -209,27 +259,16 @@ input{
     color: #3D3D3D;
 }
 .header{
-    font-size: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0 0 9px;
     margin: 30px 0 12px;
-    width: 100%;
     border-bottom: 0.3px solid #46A35880;
 }
-.logo{
-    display: inline-block;
-    width: 150px;
-    text-align: left;
-}
 .logo_img{
-    display: inline-block;
-    vertical-align: middle;
     width: 150px;
     height: auto;
-}
-.nav{
-    display: inline-block;
-    width: calc(100% - 250px);
-    text-align: center;
 }
 .menu{
     padding: 0;
@@ -258,9 +297,11 @@ input{
 }
 .menu > li:hover:after{
     display: block;
+    transition: 0.2s linear;
 }
 .menu > li:hover{
     text-shadow: black 1px 1px 2px;
+    transition: 0.2s linear;
 }
 .submenu{
     position: absolute;
@@ -299,20 +340,25 @@ input{
 }
 .menu > li:hover .submenu{
      display: block;
+    transition: 0.2s linear;
 }
 .submenu > li:hover{
     background-color: #1A712A;
+    transition: 0.2s linear;
 }
 .submenu li:hover > a{
     color: #FFFFFF;
     font-weight: 700;
+    transition: 0.2s linear;
 }
 .submenu > li:hover:after{
     border-color: #FFFFFF;
     transform: rotate(-135deg) translateY(50%);
+    transition: 0.2s linear;
 }
 .submenu > li:hover .second_submenu{
     display: block;
+    transition: 0.2s linear;
 }
 .second_submenu{
     position: absolute;
@@ -324,15 +370,13 @@ input{
 }
 .second_submenu li:hover{
     background-color: #1A712A;
+    transition: 0.2s linear;
 }
 .login{
-    display: inline-block;
     width: 100px;
-    text-align: right;
 }
-.btn_nav > img{
-    display: inline-block;
-    vertical-align: middle;
+.btn_nav > svg{
+    align-items: center;
     width: 20px;
     padding: 1px 1px 1px 1px;
 }
@@ -341,9 +385,14 @@ input{
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
 }
 .btn:hover{
     background-color: darkgreen;
+    transition: 0.2s linear;
 }
 .intro{
     background-color: #F5F5F580;
@@ -432,6 +481,7 @@ h1 > span{
 }
 .sidebar_list a:hover{
     color: darkgreen;
+    transition: 0.1s linear;
 }
 .shop{
     display: flex;
@@ -464,6 +514,7 @@ h1 > span{
 }
 .filter_list a:hover{
     color: darkgreen;
+    transition: 0.2s linear;
 }
 .filters div{
     color: #3D3D3D;
@@ -478,6 +529,7 @@ h1 > span{
 }
 .filters select:hover{
     color: darkgreen;
+    transition: 0.1s linear;
 }
 .shop_holder{
     display: flex;
@@ -533,20 +585,27 @@ h1 > span{
 .btn_shopping{
     width: 35px;
     height: 35px;
-    padding: 8px;
+    padding: 4px;
     background-color: #FFFFFF;
     border-radius: 4px;
     border: none;
     cursor: pointer;
 }
-.btn_shopping img{
+.btn_shopping svg{
     margin: 0;
 }
 .shop_card:hover .shopping_list{
     display: flex;
+    transition: 0.2s linear;
 }
 .shop_card:hover{
     border-top-color: #46A358;
+    transition: 0.3s linear;
+    transform: scale(1.02, 1.02);
+}
+.btn_shopping:hover svg{
+    fill: #46A358; !important;
+    transition: 0.2s linear;
 }
 .sale{
     background-color: #46A358;
@@ -603,10 +662,12 @@ h1 > span{
 .pages a:hover{
     background-color: #727272;
     color: #FFFFFF;
+    transition: 0.2s linear;
 }
 .pages button:hover{
     background-color: #727272;
     color: #FFFFFF;
+    transition: 0.2s linear;
 }
 .blog_find-more{
     display: flex;
@@ -714,6 +775,7 @@ h1 > span{
 }
 .blog_posts_items a:hover{
     color: #46A358;
+    transition: 0.1s linear;
 }
 .footer_block{
     display: flex;
@@ -724,7 +786,6 @@ h1 > span{
     list-style: none;
     padding: 0;
     display: flex;
-    /*gap: 61px;*/
     flex-grow: 1;
     justify-content: space-evenly;
     margin: 24px 0;
@@ -825,6 +886,7 @@ h1 > span{
 }
 .footer_info a address:hover{
     text-shadow: #1A712A 1px 1px 2px;
+    transition: 0.2s;
 }
 .footer_email:before{
     content: url("../images/message.svg");
@@ -834,6 +896,7 @@ h1 > span{
 }
 .footer_email:hover{
     text-shadow: #1A712A 1px 1px 2px;
+    transition: 0.2s;
 }
 .footer_tell:before{
     content: url("../images/tell.svg");
@@ -843,9 +906,11 @@ h1 > span{
 }
 .footer_tell:hover{
     text-shadow: #1A712A 1px 1px 2px;
+    transition: 0.2s;
 }
 .footer_tell:before:hover{
     text-shadow: #1A712A 1px 1px 2px;
+    transition: 0.2s;
 }
 .footer_menu{
     display: flex;
@@ -873,6 +938,7 @@ h1 > span{
 }
 .footer_menu_list a:hover{
     color: #1A712A;
+    transition: 0.1s linear;
 }
 .footer_social_media{
     margin-right: 155px;
@@ -893,9 +959,11 @@ h1 > span{
     height: 30px;
     align-items: center;
     justify-content: center;
+    color: rgba(70, 163, 88, 0.6);
 }
 .footer_social_media a:hover{
     border-color: #1A712A;
+    transition: 0.2s linear;
 }
 .footer_social_media_img{
     display: flex;
