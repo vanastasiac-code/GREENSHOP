@@ -39,5 +39,14 @@
             </button>
         </div>
     </div>
+    <div class="overlay loader_background">
+        <span class="loader"></span>
+    </div>
+    <script>
+        setTimeout(() => {
+            const el = document.querySelector(".loader_background");
+            el.classList.toggle("loaded");
+        }, 5000);
+    </script>
 </body>
 </html>
