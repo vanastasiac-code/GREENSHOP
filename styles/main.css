@@ -862,6 +862,37 @@ h1 > span{
     font-size: 13px;
     line-height: 1.6;
 }
+.wrap_form_join{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #727272;
+    cursor: pointer;
+    position: relative;
+    margin-top: 8px;
+}
+.wrap_form_join input{
+    display: none;
+}
+.checkbox_form_join{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #3D3D3D;
+    border-radius: 3px;
+}
+.checkbox_form_join:before{
+    content: '\2714';
+    position: absolute;
+    font-size: 19px;
+    top: -6px;
+    left: 1px;
+    color: #46A358;
+    display: none;
+}
+.wrap_form_join input:checked ~.checkbox_form_join:before{
+    display: block;
+}
 .footer_info{
     display: flex;
     align-items: center;
@@ -980,4 +1011,85 @@ h1 > span{
 }
 .footer_copyrights p{
     margin: 0;
+}
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+}
+@keyframes rotateccw {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+@keyframes spin {
+    0%,
+    100% {
+        box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+        box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+        box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+        box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+        box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+        box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+        box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+        box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+}
+.overlay{
+    background-color: rgba(103, 102, 102, 0.8);
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    color: #fff;
+    display: inline-block;
+}
+.loader:before,
+.loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+}
+.loader:after {
+    color: #46A358;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+}
+.loader_background.loaded {
+    display: none;
 }
