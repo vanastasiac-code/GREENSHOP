@@ -86,6 +86,12 @@ body{
     margin: 0 auto;
     padding: 0 15px;
 }
+.wrapper{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    min-width: 375px;
+}
 .btn{
     background-color: #46A358;
     color: #FFFFFF;
@@ -351,7 +357,7 @@ input{
     font-weight: 700;
     transition: 0.2s linear;
 }
-.submenu > li:hover:after{
+.submenu > li:hover > a:after{
     border-color: #FFFFFF;
     transform: rotate(-135deg) translateY(50%);
     transition: 0.2s linear;
@@ -394,15 +400,19 @@ input{
     background-color: darkgreen;
     transition: 0.2s linear;
 }
+.nav_burger-menu{
+    display: none;
+}
 .intro{
     background-color: #F5F5F580;
     margin-bottom: 46px;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 .intro_content{
-    display: inline-block;
-    width: 557px;
-    vertical-align: middle;
-    padding: 0;
+    flex-grow: 1;
+    padding: 40px 30px;
 }
 .intro_content_welcome{
     color: #3D3D3D;
@@ -413,8 +423,7 @@ input{
 h1{
     color: #3D3D3D;
     font-size: 60px;
-    line-height: 70px;
-    width: 560px;
+    line-height: 1;
     font-weight: 900;
     text-transform: uppercase;
     margin: 0;
@@ -426,25 +435,18 @@ h1 > span{
 .intro_content_text{
     color: #727272;
     line-height: 24px;
-    margin: 7px 20px 12px 0;
+    margin: 7px 20px 56px 0;
     padding-right:12px;
 }
 .intro_img{
-    display: inline-block;
-    vertical-align: middle;
-    width: 507px;
-    text-align: right;
-    padding: 0 0 17px;
-    margin: 0 12px 0 88px;
+    width: 100%;
+    flex-grow: 1;
 }
 .btn_intro{
     font-size: 16px;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 0.9;
     padding: 7px 27px 9px 26px;
-    margin-top: 44px;
-    display: block;
-    width: 150px;
 }
 .sidebar{
     width: 310px;
@@ -1092,4 +1094,137 @@ h1 > span{
 }
 .loader_background.loaded {
     display: none;
+}
+@media  screen and (max-width: 992px) {
+    .intro_img{
+        width: 45%;
+    }
+    .intro_content{
+        flex-shrink: 1;
+    }
+    h1{
+        font-size: 50px;
+    }
+    .intro_content_text{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .header {
+        position: relative;
+    }
+    .nav {
+        transform: translateX(120%);
+        position: absolute;
+        top: 100%;
+        right: -14px;
+        background: rgba(0, 128, 0, 0.5);
+        width: 200px;
+        transition: transform 0.4s linear;
+    }
+    .menu{
+         display: flex;
+         flex-direction: column;
+         margin: 0;
+    }
+    .menu > li{
+        padding: 15px;
+        border-bottom: 1px solid rgba(70, 163, 88, 1);
+        margin: 0;
+    }
+    .menu > li:hover:after{
+        display: none;
+    }
+    .nav_burger-menu{
+        display: block;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        top: 0;
+        z-index: 1000;
+        margin-left: 15px;
+    }
+    .nav_burger-menu i{
+        position: absolute;
+        height: 2px;
+        background: #46A358;
+        width: 30px;
+        left: 0;
+        transition: all 0.3s;
+    }
+    .nav_burger-menu i:nth-child(1){
+        top: 16px;
+    }
+    .nav_burger-menu i:nth-child(2){
+        top: 24px;
+    }
+    .nav_burger-menu i:nth-child(3){
+        top: 32px;
+    }
+    .header.active i:nth-child(1){
+        top: 25px;
+        -webkit-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+    }
+    .header.active i:nth-child(2){
+        background: transparent;
+    }
+    .header.active i:nth-child(3){
+        top: 25px;
+        -webkit-transform: rotateZ(-45deg);
+        transform: rotateZ(-45deg);
+    }
+    .header.active .nav{
+        transform: translateX(0);
+    }
+
+    .submenu{
+        top: -70%;
+        left: -94%;
+    }
+    .submenu li{
+        text-align: right;
+    }
+    .submenu > li:has(.second_submenu) > a:after{
+        display: none;
+    }
+    .submenu > li:has(.second_submenu) > a:before{
+        content: '';
+        width: 6px;
+        height: 6px;
+        border: solid #3D3D3D;
+        border-width: 1px 1px 0 0;
+        transform: rotate(-135deg) translateY(50%);
+        display: inline-block;
+        position: absolute;
+        right: 151px;
+        top: 50%;
+    }
+    .submenu > li:hover > a:before{
+        border-color: #FFFFFF;
+        transform: rotate(45deg) translateY(-50%);
+        transition: 0.2s linear;
+    }
+
+    .second_submenu{
+        left: -95%;
+        top: 80%;
+    }
+
+    .login {
+        margin-left: auto;
+    }
+
+    .intro_content_text{
+        margin: 7px 20px 40px 0;
+    }
+    .intro_img{
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 350px;
+        height: auto;
+        z-index: -1;
+        opacity: 0.7;
+    }
 }
