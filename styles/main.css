@@ -90,7 +90,7 @@ body{
     position: relative;
     width: 100%;
     overflow: hidden;
-    min-width: 375px;
+    min-width: 379px;
 }
 .btn{
     background-color: #46A358;
@@ -610,7 +610,7 @@ h1 > span{
     transform: scale(1.02, 1.02);
 }
 .btn_shopping:hover svg{
-    fill: #46A358; !important;
+    fill: #46A358 !important;
     transition: 0.2s linear;
 }
 .sale{
@@ -955,16 +955,18 @@ h1 > span{
 }
 .footer_menu{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 15px;
     padding: 33px 25px 29px;
     background-color: #FBFBFB;
     border-bottom: 1px solid rgba(70, 163, 88, 0.2);
     position: relative;
 }
-/*.footer_menu_wrap{*/
-/*    display: flex;*/
-/*    gap: 104px;*/
-/*}*/
+.footer_menu_wrap{
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+}
 .footer_menu_nav h3{
     color: #3D3D3D;
     font-size: 18px;
@@ -975,7 +977,7 @@ h1 > span{
     list-style: none;
     padding: 0;
     margin-top: 8px;
-    max-width: 138px;
+    flex: 1 1 calc((100% - 300px) / 3);
 }
 .footer_menu_list a{
     text-decoration: none;
@@ -1154,6 +1156,10 @@ h1 > span{
     }
     .footer_form input{
         max-width: 219px;
+    }
+
+    .footer_menu_wrap{
+        gap: 40px;
     }
 }
 @media screen and (max-width: 850px) {
@@ -1393,23 +1399,23 @@ h1 > span{
 
     }
 
-    /*.footer_menu_wrap{*/
-    /*    display: flex;*/
-    /*    flex-direction: column;*/
-    /*    gap: 45px;*/
-    /*}*/
+    .footer_menu_wrap{
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+    }
     .footer_menu_list{
         display: none;
     }
     .footer_menu{
-        flex-direction: column;
+        justify-content: space-between;
         gap: 20px;
     }
     .sub-submenu{
         background: rgba(0, 128, 0, 0.8);
         position: absolute;
-        top: 11%;
-        left: 22%;
+        top: 7%;
+        left: 26%;
         width: 200px;
         display: none;
         margin: 0;
@@ -1438,6 +1444,15 @@ h1 > span{
         transition: 0.2s linear;
     }
 }
+@media (max-width: 700px){
+    .footer_menu{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .footer_menu_wrap{
+        width: 150px;
+    }
+}
 @media screen and (max-width: 630px) {
     .filters{
         flex-wrap: wrap;
@@ -1445,5 +1460,10 @@ h1 > span{
 
     .footer_menu_nav h3{
         font-size: 16px;
+    }
+}
+@media screen and (max-width: 520px) {
+    .footer_block_list{
+        display: none;
     }
 }
