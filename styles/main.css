@@ -1031,7 +1031,7 @@ button {
 }
 
 .characteristics__title.active:after {
-    border-color: red transparent transparent red;
+    border-color: #008000 transparent transparent #008000;
 }
 .characteristics__description {
     margin-top: -2px;
@@ -1043,18 +1043,18 @@ button {
     transition: height .4s ease-in-out;
 }
 .characteristics__title:hover + .characteristics__description {
-    border-color: #F00;
+    border-color: #008000;
 }
 .characteristics__title:focus {
     outline:none;
 }
 .characteristics__title:hover,
 .characteristics__title:focus {
-    border-color: #F00;
+    border-color: #008000;
 }
 .characteristics__title:hover:after,
 .characteristics__title:focus:after {
-    border-color: transparent red red transparent;
+    border-color: transparent #008000 #008000 transparent;
 }
 
 .characteristics__description.active {
@@ -1090,6 +1090,27 @@ button {
 
 .characteristics__item-description:last-child {
     padding-bottom: 30px;
+}
+.characteristics__list-description_social{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 12px 45px 12px 15px;;
+    list-style: none;
+}
+.characteristics__item-description_social a{
+    text-decoration: none;
+    border: 1px solid rgba(70, 163, 88, 0.2);
+    border-radius: 4px;
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    color: rgba(70, 163, 88, 0.6);
+}
+.characteristics__item-description_social img{
+    padding-left: 15px;
 }
 .footer_social_media{
     margin-right: 155px;
@@ -1510,21 +1531,13 @@ button {
         display: block;
     }
     .footer_menu{
-        justify-content: space-between;
+        display: block;
     }
     .footer_menu_wrap{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    .footer_menu_nav h3{
-        display: none;
-    }
-    .footer_menu_list{
         display: none;
     }
     .footer_social_media{
-        padding-top: 13px;
+        display: none;
     }
 }
 @media screen and (max-width: 630px) {
