@@ -463,7 +463,7 @@
                                 <a href="#">Read More</a>
                             </div>
                         </div>
-                        <div class="blog_posts_items blog_posts_items_disappear">
+                        <div class="blog_posts_items">
                             <img src="images/blog3.png" alt="plant">
                             <div>
                                 <time datetime="09-15">September 15  I Read in 3 minutes</time>
@@ -474,7 +474,7 @@
                                 <a href="#">Read More</a>
                             </div>
                         </div>
-                        <div class="blog_posts_items blog_posts_items_disappear">
+                        <div class="blog_posts_items">
                             <img src="images/blog4.png" alt="plant">
                             <div>
                                 <time datetime="09-15">September 15  I Read in 2 minutes</time>
@@ -542,32 +542,104 @@
                 <div class="footer_menu_wrap">
                     <div class="footer_menu_nav">
                         <h3>My Account</h3>
-                        <ul class="footer_menu_list sub-submenu">
+                        <ul class="footer_menu_list">
                             <li><a href="#">My Account</a></li>
                             <li><a href="#">Our stores</a></li>
                             <li><a href="#">Contact us</a></li>
                             <li><a href="#">Career</a></li>
                             <li><a href="#">Specials</a></li>
                         </ul>
+                        <ul class="characteristics__list">
+                            <li class="characteristics__item">
+                                <button class="characteristics__title active" type="button">My Account</button>
+                                <div class="characteristics__description active">
+                                    <ul class="characteristics__list-description">
+                                        <li class="characteristics__item-description">
+                                            <a href="#">My Account</a>
+                                        </li>
+                                        <li class="characteristics__item-description">
+                                            <a href="#">Our stores</a>
+                                        </li>
+                                        <li class="characteristics__item-description">
+                                            <a href="#">Contact us</a>
+                                        </li>
+                                        <li class="characteristics__item-description">
+                                            <a href="#">Career</a>
+                                        </li>
+                                        <li class="characteristics__item-description">
+                                            <a href="#">Specials</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="footer_menu_nav">
                         <h3>Help & Guide</h3>
-                        <ul class="footer_menu_list sub-submenu">
+                        <ul class="footer_menu_list">
                             <li><a href="#">Help Center</a></li>
                             <li><a href="#">How to Buy</a></li>
                             <li><a href="#">Shipping & Delivery</a></li>
                             <li><a href="#">Product Policy</a></li>
                             <li><a href="#">How to Return</a></li>
                         </ul>
+                        <ul class="characteristics__list">
+                            <li class="characteristics__item">
+                                <button class="characteristics__title active" type="button">Help & Guide</button>
+                                <div class="characteristics__description active">
+                                    <ul class="characteristics__list-description ">
+                                        <li class="characteristics__item-description">
+                                            <a href="#">Help Center</a>
+                                        </li>
+                                        <li class="characteristics__item-description">
+                                            <a href="#">How to Buy</a>
+                                        </li>
+                                        <li class="characteristics__item-description">
+                                            <a href="#">Shipping & Delivery</a>
+                                        </li>
+                                        <li class="characteristics__item-description">
+                                            <a href="#">Product Policy</a>
+                                        </li>
+                                        <li class="characteristics__item-description">
+                                            <a href="#">How to Return</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="footer_menu_nav">
                         <h3>Categories</h3>
-                        <ul class="footer_menu_list sub-submenu">
+                        <ul class="footer_menu_list">
                             <li><a href="#">House Plants</a></li>
                             <li><a href="#">Potter Plants</a></li>
                             <li><a href="#">Seeds</a></li>
                             <li><a href="#">Small Plants</a></li>
                             <li><a href="#">Accessories</a></li>
+                        </ul>
+                        <ul class="characteristics__list">
+                            <li class="characteristics__item">
+                                <button class="characteristics__title active" type="button">Categories</button>
+                                <div class="characteristics__description active ">
+                                    <ul class="characteristics__list-description ">
+                                        <li class="characteristics__item-description">
+                                            <a href="#">House Plants</a>
+                                        </li>
+                                        <li class="characteristics__item-description">
+                                            <a href="#">Potter Plants</a>
+                                        </li>
+                                        <li class="characteristics__item-description">
+                                            <a href="#">Seeds</a>
+                                        </li>
+                                        <li class="characteristics__item-description">
+                                            <a href="#">Small Plants</a>
+                                        </li>
+                                        <li class="characteristics__item-description">
+                                            <a href="#">Accessories</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -622,6 +694,47 @@
             });
         });
     </script>
+    <script>
+        const characteristicsListElem = document.querySelector('.characteristics__list');
+        const characteristicsItemElems = document.querySelectorAll('.characteristics__item');
 
+        characteristicsItemElems.forEach(elem => {
+            if (elem.children[1].classList.contains('active')) {
+                elem.children[1].style.height = elem.children[1].scrollHeight + 'px';
+            }
+        })
+
+        const open = (button, dropDown) => {
+            closeAllDrops(button, dropDown);
+            dropDown.style.height = dropDown.scrollHeight + 'px';
+            button.classList.add('active');
+            dropDown.classList.add('active');
+        };
+
+        const close = (button, dropDown) => {
+            button.classList.remove('active');
+            dropDown.classList.remove('active');
+            dropDown.style.height = '';
+        };
+
+        const closeAllDrops = (button, dropDown) => {
+            characteristicsItemElems.forEach((elem) => {
+                if (elem.children[0] !== button && elem.children[1] !== dropDown) {
+                    close(elem.children[0], elem.children[1]);
+                }
+            })
+        }
+
+        characteristicsListElem.addEventListener('click', (event) => {
+            const target = event.target;
+            if (target.classList.contains('characteristics__title')) {
+                const parent = target.closest('.characteristics__item');
+                const description = parent.querySelector('.characteristics__description');
+                description.classList.contains('active') ?
+                    close(target, description) :
+                    open(target, description);
+            }
+        });
+    </script>
 </body>
 </html>
