@@ -1251,8 +1251,12 @@ button {
     .sidebar{
         width: 200px;
     }
+    .shop_holder{
+        justify-content: center;
+    }
     .shop_card{
         flex-basis: calc((100% - 60px)/3);
+        max-width: 300px;
     }
 
     .blog_find-more_content img{
@@ -1506,6 +1510,9 @@ button {
     .footer_block{
         flex-wrap: wrap;
     }
+    .footer_block_list li+li:before{
+        height: 240px;
+    }
     .footer_form{
         max-width: 500px;
         padding: 0 15px;
@@ -1559,12 +1566,18 @@ button {
     .shop_now{
         margin-bottom: 63px;
     }
+    .footer_block_list li+li:before{
+        height: 300px;
+    }
 }
 @media screen and (max-width: 480px) {
     .blog_posts_items{
         min-width: 150px;
     }
 
+    .footer_block_list li+li:before{
+        height: 350px;
+    }
     .footer_item_garden{
         background-size: 55px auto;
     }
