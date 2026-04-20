@@ -90,7 +90,7 @@ body{
     position: relative;
     width: 100%;
     overflow: hidden;
-    min-width: 379px;
+    min-width: 375px;
 }
 .btn{
     background-color: #46A358;
@@ -1517,9 +1517,6 @@ button {
         max-width: 500px;
         padding: 0 15px;
     }
-    .footer_form input{
-        max-width: 500px;
-    }
 
     .footer_info{
         flex-direction: column;
@@ -1575,18 +1572,17 @@ button {
         min-width: 150px;
     }
 
+    .footer_block_list{
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 25px;
+    }
+    .footer_block_list li{
+        max-width: 400px;
+        padding-top: 0;
+        padding-left: 108px;
+    }
     .footer_block_list li+li:before{
-        height: 350px;
-    }
-    .footer_item_garden{
-        background-size: 55px auto;
-    }
-    .footer_item_plant{
-        background-size: 62px auto;
-        background-position-y: 7px;
-    }
-    .footer_item_watering{
-        background-size: 93px auto;
-        background-position-x: -7px;
+        display: none;
     }
 }
