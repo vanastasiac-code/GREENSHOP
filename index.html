@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green shop</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container wrapper">
         <header class="header">
             <div class="logo">
                 <svg class="icon-logo logo_img" viewBox="0 0 137 32" width="137" height="32">
@@ -54,6 +55,11 @@
                     Login
                 </a>
             </div>
+            <span class="nav_burger-menu">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
         </header>
         <main>
             <section class="intro">
@@ -85,6 +91,22 @@
                 </aside>
                 <article class="shop">
                     <div class="filters">
+                        <div class="sidebar_categories_filters">
+                           <span>
+                                Categories
+                           </span>
+                            <ul class="categories_filters_list">
+                                <li><a class="active" href="#">House Plants</a></li>
+                                <li><a href="#">Potter Plants</a></li>
+                                <li><a href="#">Seeds</a></li>
+                                <li><a href="#">Small Plants</a></li>
+                                <li><a href="#">Big Plants</a></li>
+                                <li><a href="#">Succulents</a></li>
+                                <li><a href="#">Trerrariums</a></li>
+                                <li><a href="#">Gardening</a></li>
+                                <li><a href="#">Accessories</a></li>
+                            </ul>
+                        </div>
                         <ul class="filter_list">
                             <li><a class="active" href="#">All Plants</a></li>
                             <li><a href="#">New Arrivals</a></li>
@@ -517,35 +539,37 @@
                 <a class="footer_tell" href="tel:+8801911717490">+88 01911 717 490</a>
             </div>
             <div class="footer_menu">
-                <div class="footer_menu_nav">
-                    <h3>My Account</h3>
-                    <ul class="footer_menu_list">
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">Our stores</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Career</a></li>
-                        <li><a href="#">Specials</a></li>
-                    </ul>
-                </div>
-                <div class="footer_menu_nav">
-                    <h3>Help & Guide</h3>
-                    <ul class="footer_menu_list">
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">How to Buy</a></li>
-                        <li><a href="#">Shipping & Delivery</a></li>
-                        <li><a href="#">Product Policy</a></li>
-                        <li><a href="#">How to Return</a></li>
-                    </ul>
-                </div>
-                <div class="footer_menu_nav">
-                    <h3>Categories</h3>
-                    <ul class="footer_menu_list">
-                        <li><a href="#">House Plants</a></li>
-                        <li><a href="#">Potter Plants</a></li>
-                        <li><a href="#">Seeds</a></li>
-                        <li><a href="#">Small Plants</a></li>
-                        <li><a href="#">Accessories</a></li>
-                    </ul>
+                <div class="footer_menu_wrap">
+                    <div class="footer_menu_nav">
+                        <h3>My Account</h3>
+                        <ul class="footer_menu_list">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Our stores</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Career</a></li>
+                            <li><a href="#">Specials</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_menu_nav">
+                        <h3>Help & Guide</h3>
+                        <ul class="footer_menu_list">
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">How to Buy</a></li>
+                            <li><a href="#">Shipping & Delivery</a></li>
+                            <li><a href="#">Product Policy</a></li>
+                            <li><a href="#">How to Return</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_menu_nav">
+                        <h3>Categories</h3>
+                        <ul class="footer_menu_list">
+                            <li><a href="#">House Plants</a></li>
+                            <li><a href="#">Potter Plants</a></li>
+                            <li><a href="#">Seeds</a></li>
+                            <li><a href="#">Small Plants</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="footer_social_media">
                     <h3>Social Media</h3>
@@ -579,6 +603,116 @@
                     <h3>We accept</h3>
                     <img src="images/we_accept.png" alt="we accept">
                 </div>
+                <ul class="characteristics__list">
+                    <li class="characteristics__item">
+                        <button class="characteristics__title active" type="button">My Account</button>
+                        <div class="characteristics__description active">
+                            <ul class="characteristics__list-description">
+                                <li class="characteristics__item-description">
+                                    <a href="#">My Account</a>
+                                </li>
+                                <li class="characteristics__item-description">
+                                    <a href="#">Our stores</a>
+                                </li>
+                                <li class="characteristics__item-description">
+                                    <a href="#">Contact us</a>
+                                </li>
+                                <li class="characteristics__item-description">
+                                    <a href="#">Career</a>
+                                </li>
+                                <li class="characteristics__item-description">
+                                    <a href="#">Specials</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="characteristics__item">
+                        <button class="characteristics__title active" type="button">Help & Guide</button>
+                        <div class="characteristics__description active">
+                            <ul class="characteristics__list-description ">
+                                <li class="characteristics__item-description">
+                                    <a href="#">Help Center</a>
+                                </li>
+                                <li class="characteristics__item-description">
+                                    <a href="#">How to Buy</a>
+                                </li>
+                                <li class="characteristics__item-description">
+                                    <a href="#">Shipping & Delivery</a>
+                                </li>
+                                <li class="characteristics__item-description">
+                                    <a href="#">Product Policy</a>
+                                </li>
+                                <li class="characteristics__item-description">
+                                    <a href="#">How to Return</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="characteristics__item">
+                        <button class="characteristics__title active" type="button">Categories</button>
+                        <div class="characteristics__description active ">
+                            <ul class="characteristics__list-description ">
+                                <li class="characteristics__item-description">
+                                    <a href="#">House Plants</a>
+                                </li>
+                                <li class="characteristics__item-description">
+                                    <a href="#">Potter Plants</a>
+                                </li>
+                                <li class="characteristics__item-description">
+                                    <a href="#">Seeds</a>
+                                </li>
+                                <li class="characteristics__item-description">
+                                    <a href="#">Small Plants</a>
+                                </li>
+                                <li class="characteristics__item-description">
+                                    <a href="#">Accessories</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="characteristics__item">
+                        <button class="characteristics__title active" type="button">Social media</button>
+                        <div class="characteristics__description active ">
+                            <ul class="characteristics__list-description_social">
+                                <li class="characteristics__item-description_social">
+                                    <a href="#">
+                                        <i class="icon-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="characteristics__item-description_social">
+                                    <a href="#">
+                                        <i class="icon-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="characteristics__item-description_social">
+                                    <a href="#">
+                                        <i class="icon-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="characteristics__item-description_social">
+                                    <a href="#">
+                                        <i class="icon-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="characteristics__item-description_social">
+                                    <a href="#">
+                                        <i class="icon-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="characteristics__item">
+                        <button class="characteristics__title active" type="button">We accept</button>
+                        <div class="characteristics__description active ">
+                            <ul class="characteristics__list-description footer_social_media_img">
+                                <li class="characteristics__item-description_social">
+                                    <img src="images/we_accept.png" alt="we accept">
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div class="footer_copyrights">
                 <p>
@@ -587,5 +721,58 @@
             </div>
         </footer>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const myButton = document.querySelector(".nav_burger-menu");
+            const header = document.querySelector(".header");
+
+
+            myButton.addEventListener("click", function () {
+                header.classList.toggle("active");
+            });
+        });
+    </script>
+    <script>
+        const characteristicsListElem = document.querySelector('.characteristics__list');
+        const characteristicsItemElems = document.querySelectorAll('.characteristics__item');
+
+        characteristicsItemElems.forEach(elem => {
+            if (elem.children[1].classList.contains('active')) {
+                elem.children[1].style.height = elem.children[1].scrollHeight + 'px';
+            }
+        })
+
+        const open = (button, dropDown) => {
+            closeAllDrops(button, dropDown);
+            dropDown.style.height = dropDown.scrollHeight + 'px';
+            button.classList.add('active');
+            dropDown.classList.add('active');
+        };
+
+        const close = (button, dropDown) => {
+            button.classList.remove('active');
+            dropDown.classList.remove('active');
+            dropDown.style.height = '';
+        };
+
+        const closeAllDrops = (button, dropDown) => {
+            characteristicsItemElems.forEach((elem) => {
+                if (elem.children[0] !== button && elem.children[1] !== dropDown) {
+                    close(elem.children[0], elem.children[1]);
+                }
+            })
+        }
+
+        characteristicsListElem.addEventListener('click', (event) => {
+            const target = event.target;
+            if (target.classList.contains('characteristics__title')) {
+                const parent = target.closest('.characteristics__item');
+                const description = parent.querySelector('.characteristics__description');
+                description.classList.contains('active') ?
+                    close(target, description) :
+                    open(target, description);
+            }
+        });
+    </script>
 </body>
 </html>
